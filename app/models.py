@@ -30,7 +30,7 @@ class Product(models.Model):
 
 class Lesson(models.Model):
     """Модель для уроков"""
-    tutorial = models.ManyToManyField(Product,
+    product = models.ManyToManyField(Product,
                                       verbose_name='Продукт',)
     title = models.CharField(max_length=255, unique=True,
                              verbose_name='Название')
